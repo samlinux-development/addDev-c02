@@ -13,10 +13,14 @@
 		"DFXVM_INIT_YES":"true"
 	},
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "sh -ci \"$(curl -fsSL https://internetcomputer.org/install.sh)\" && source $HOME/.local/share/dfx/env" 
+	"postCreateCommand": "sh -ci \"$(curl -fsSL https://internetcomputer.org/install.sh)\" && source $HOME/.local/share/dfx/env",
 
 	// Configure tool-specific properties.
-	// "customizations": {},
+	"customizations": {
+		"codespaces": {
+        		"openFiles": ["backend/main.mo"]
+          }
+	}
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
